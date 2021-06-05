@@ -1,0 +1,27 @@
+.profileScreen img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.profileScreen .profileTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+.profileScreen .details p {
+  margin-top: -10px;
+}
+.profileScreen .details .d_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.fullDetails {
+  padding: 40px;
+}
+
+.i_detail {
+  display: flex;
+  justify-content: space-between;
+}

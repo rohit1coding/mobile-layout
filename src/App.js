@@ -1,18 +1,19 @@
 import React from 'react';
-import BottomNavigation from './components/BottomNavigation';
-import ProductContainer from './components/CategorySection';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+import HomeScreen from './components/HomeScreen';
 import Navbar from './components/Navbar';
-import Slider from './components/Slider';
-import TopSection from './components/TopSection';
+import ProductDetails from './components/ProductDetails';
+import ProfileScreen from './components/ProfileScreen';
 
 const App = () => {
   return (
-    <div>
+    <Router>
       <Navbar />
-      <TopSection />
-      <ProductContainer />
-      <BottomNavigation />
-    </div>
+      <Route path="/" exact component={HomeScreen} />
+      <Route path="/product" component={ProductDetails} />
+      <Route path="/profile" component={ProfileScreen} />
+    </Router>
   );
 };
 

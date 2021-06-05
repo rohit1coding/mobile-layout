@@ -19,3 +19,14 @@ input:focus {
 .flex-wrap {
   flex-wrap: wrap;
 }
+.flex-row-sb {
+  display: flex;
+  justify-content: space-between;
+}
+a {
+  color: #000 !important;
+  text-decoration: none !important;
+}
+a:active {
+  color: blue !important;
+}

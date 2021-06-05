@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './style.css';
 
@@ -8,19 +9,27 @@ const BottomNavigation = () => {
       <div className="iconsContainer">
         <div>
           <i className="bi bi-house"></i>
-          <p>Home</p>
+          <Link to="/">
+            <p>Home</p>
+          </Link>
         </div>
         <div>
           <i className="bi bi-chat-dots"></i>
-          <p>Chat</p>
+          <Link>
+            <p>Chat</p>
+          </Link>
         </div>
         <div>
           <i className="bi bi-cart"></i>
-          <p>Cart</p>
+          <Link>
+            <p>Cart</p>
+          </Link>
         </div>
         <div>
           <i className="bi bi-person"></i>
-          <p>Profile</p>
+          <Link to="/profile">
+            <p>Profile</p>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,0 +1,37 @@
+.section1 .rating {
+  padding-bottom: 15px;
+}
+.section1 .rating .stars i {
+  color: gold;
+  font-size: 20px;
+}
+.section1 .rating .badge {
+  width: 50px;
+  margin-left: 25px;
+  font-size: 16px;
+  color: #fff;
+}
+.section2 p {
+  font-size: 16px;
+}
+.buttons {
+  display: flex;
+  padding-bottom: 10px;
+}
+.buttons .btn1 {
+  width: 100%;
+  background-color: #eeeeff;
+  font-size: 16px;
+  border: none;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.buttons .btn2 {
+  width: 100%;
+  background-color: #d11402;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
