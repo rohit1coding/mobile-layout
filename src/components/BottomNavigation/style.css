@@ -1,0 +1,23 @@
+.bottomNavigation {
+  border-radius: 50px;
+  box-shadow: 0 0 5px #ddd;
+}
+.bottomNavigation .iconsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.bottomNavigation .iconsContainer > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bottomNavigation .iconsContainer > div p {
+  margin: 0;
+  margin-top: -10px;
+}
+.bottomNavigation .iconsContainer i {
+  font-size: 25px;
+}

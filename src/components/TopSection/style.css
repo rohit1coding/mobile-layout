@@ -1,0 +1,26 @@
+.topsection {
+  background-color: #f8f9f9;
+  padding-bottom: 10px;
+}
+.categories {
+  margin-top: 20px;
+}
+.item_container {
+  display: flex;
+  justify-content: start;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  padding: 10px;
+}
+.item p {
+  margin-left: -40px;
+  margin-top: 10px;
+}
+.item i {
+  font-size: 25px;
+  padding: 15px;
+  box-shadow: 0 0 3px #ddd;
+  border-radius: 50%;
+  margin-right: 80px;
+  background-color: #fff;
+}
