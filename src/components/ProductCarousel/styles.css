@@ -97,3 +97,24 @@
 .arrow--disabled {
   fill: rgba(255, 255, 255, 0.5);
 }
+@media(max-width:1998px){
+  .product_image{
+  width: auto;
+  height: 350px;
+  }
+}
+@media(max-width:998px){
+  .product_image{
+  height: 300px;
+  }
+}
+@media(max-width:600px){
+  .product_image{
+  height: 250px;
+  }
+}
+@media(max-width:480px){
+  .product_image{
+  height: 180px;
+  }
+}

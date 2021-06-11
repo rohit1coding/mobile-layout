@@ -4,19 +4,20 @@ import { Link } from 'react-router-dom';
 
 import '../style.css';
 
-const Product = ({ title, price, offerPrice }) => {
+const Product = (props) => {
+  console.log(props);
   return (
-    <Link to="/product">
+    <Link to={`/product/${props.productID}`}>
       <div className="product mb-4">
         <div className="imageContainer">
-          <img src={product} className="img-fluid" />
+          <img src={props.image?props.image:product} alt={"NO Image"} className="img-fluid" />
         </div>
         <div className="title">
-          <p>Title</p>
+          <p>{props.name}</p>
         </div>
         <div className="productPricing">
           <span className="badge rounded-pill bg-danger">
-            <span style={{ textDecoration: 'line-through' }}>$460</span> $320
+            <span style={{ textDecoration: 'line-through' }}>${props.price}</span> ${props.offerPrice}
           </span>
           <i className="bi bi-heart"></i>
         </div>

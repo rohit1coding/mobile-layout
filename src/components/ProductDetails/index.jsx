@@ -1,18 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css';
 
 import BottomNavigation from '../BottomNavigation';
 import ProductCarousel from '../ProductCarousel';
+import { useParams } from 'react-router-dom';
 
 const ProductDetails = () => {
+  const {productID}=useParams()
+  const [data,setData]=useState()
+  useEffect(()=>{
+    fetch(`https://tas-server.herokuapp.com/api/projects/${productID}`,{
+      method:"get"
+    }).then(res=>res.json())
+    .then(result=>{
+        console.log(result)
+        setData(result)
+        // console.log(data.image)
+    })
+},[])
+
   return (
     <>
-      <ProductCarousel />
+    {data?
+      <div>
+      <ProductCarousel image={data.image} />
+      
       <div className="container-x">
         <div className="section1">
-          <h4>Product Name</h4>
+          <h4>{data.name}</h4>
           <h3>
-            <span style={{ textDecoration: 'line-through' }}>$460</span> $320
+            <span style={{ textDecoration: 'line-through' }}>${data.basic.basePrice}</span> ${data.basic.offerPrice}
           </h3>
           <div className="rating">
             <span className="stars">
@@ -57,6 +74,8 @@ const ProductDetails = () => {
         </div>
       </div>
       <BottomNavigation />
+      </div>
+      :<h2 style={{textAlign:"center",color:"red"}}>Loading...!!</h2>}
     </>
   );
 };

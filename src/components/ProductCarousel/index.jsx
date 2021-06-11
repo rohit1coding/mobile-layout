@@ -4,6 +4,7 @@ import 'keen-slider/keen-slider.min.css';
 import './styles.css';
 
 const ProductCarousel = (props) => {
+  console.log(props.image);
   const [currentSlide, setCurrentSlide] = React.useState(0);
   const [sliderRef, slider] = useKeenSlider({
     initial: 0,
@@ -16,9 +17,9 @@ const ProductCarousel = (props) => {
     <>
       <div className="navigation-wrapper">
         <div ref={sliderRef} className="keen-slider">
-          <div className="keen-slider__slide number-slide1 cardstyle">1</div>
-          <div className="keen-slider__slide number-slide2 cardstyle">2</div>
-          <div className="keen-slider__slide number-slide3 cardstyle">3</div>
+          <div className="keen-slider__slide number-slide1 cardstyle"><img className="product_image" src={props.image} alt="1" /></div>
+          <div className="keen-slider__slide number-slide2 cardstyle"><img className="product_image" src={props.image} alt="2" /></div>
+          <div className="keen-slider__slide number-slide3 cardstyle"><img className="product_image" src={props.image} alt="3" /></div>
         </div>
         {slider && (
           <>
